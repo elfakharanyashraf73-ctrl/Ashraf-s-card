@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashraf Ahmed Elfakharany</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:     #3b5228;
+  --orange: #e8922a;
+  --orange2:#c97718;
+  --cream:  #fdf6e8;
+  --line:   #e2d8c4;
+  --label:  #5a7a40;
+  --shadow: rgba(0,0,0,0.4);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  font-family: 'Jost', sans-serif;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(0,0,0,0.32) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.card-wrap {
+  position: relative;
+  width: min(90vw, 400px);
+}
+
+/* ── النبتة ثابتة (بدون أنيميشن) ── */
+.plant-img {
+  position: absolute;
+  top: -70px;
+  left: -40px;
+  width: 170px;
+  z-index: 20;
+  filter: drop-shadow(2px 6px 10px rgba(0,0,0,0.22));
+}
+
+.info-card {
+  background: var(--cream);
+  border-radius: 24px;
+  padding: 40px 30px 30px;
+  box-shadow: 0 28px 70px var(--shadow);
+  margin-top: 20px;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid var(--line);
+}
+
+.card-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #253318;
+}
+
+.card-header p {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-top: 8px;
+}
+
+.field { 
+  margin-bottom: 18px; 
+}
+
+.field-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--label);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.field-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--orange2);
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--line);
+  display: block;
+  line-height: 1.4;
+}
+
+.card-footer-line {
+  margin-top: 10px;
+  border-top: 1.5px solid var(--line);
+  width: 100%;
+}
+
+.page-label {
+  position: absolute;
+  bottom: 30px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+</style>
+</head>
+<body>
+
+<div class="page" id="page-info">
+  <div class="card-wrap">
+
+    <img class="plant-img" src="https://uploads.onecompiler.io/44928pbcw/44nna77q2/Untitled212_20260405093203.png" alt="plant"/>
+
+    <div class="info-card">
+      <div class="card-header">
+        <h1>Ashraf Elfakharany</h1>
+        <p>Personal Information</p>
+      </div>
+      
+      <div class="field">
+        <span class="field-label">Full Name</span>
+        <span class="field-value">Ashraf Ahmed Mohamed Abu al-Ma'ati Elfakharany</span>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Phone Number 1</span>
+        <span class="field-value">01557644277</span>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Phone Number 2</span>
+        <span class="field-value">01557644277</span>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Email Address</span>
+        <span class="field-value">elfakharanyashraf73@gmail.com</span>
+      </div>
+
+      <div class="field" style="margin-bottom: 10px;">
+        <span class="field-label">Residence Address</span>
+        <span class="field-value" dir="rtl">شارع عبد السلام عارف - شارع الفيلا</span>
+      </div>
+
+      <div class="card-footer-line"></div>
+    </div>
+  </div>
+
+  <span class="page-label">Contact Details</span>
+</div>
+
+</body>
+</html>
